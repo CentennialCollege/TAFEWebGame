@@ -19,6 +19,9 @@ var objects;
             _this.y = 430;
             return _this;
         }
+        Plane.prototype.Update = function (stage) {
+            this.x = stage.mouseX;
+        };
         return Plane;
     }(createjs.Bitmap));
     objects.Plane = Plane;

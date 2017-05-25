@@ -6,5 +6,9 @@ module objects {
       this.regY = 32.5;
       this.y = 430;
     }
+
+    Update(stage:createjs.Stage) {
+      this.x = stage.mouseX;
+    }
   }
 }
