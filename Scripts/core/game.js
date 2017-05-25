@@ -16,6 +16,7 @@
     }
     function Update() {
         ocean.Update();
+        plane.Update(stage);
         stage.update(); // refreshes the stage
     }
     function Main() {
