@@ -1,7 +1,8 @@
 // IIFE - Immediately Invoked Function Expression
 (function() {
-  let canvas;
-  let stage;
+  let canvas:HTMLElement;
+  let stage:createjs.Stage;
+  let ocean:objects.Ocean;
 
   function Init() {
     Start();
@@ -16,12 +17,14 @@
   }
 
   function Update() {
+    ocean.Update();
+
     stage.update(); // refreshes the stage
   }
 
   function Main() {
-    let helloLabel = new createjs.Text("Hello, World!", "40px Consolas", "#000000");
-    stage.addChild(helloLabel);
+    ocean = new objects.Ocean();
+    stage.addChild(ocean);
   }
 
   window.onload = Init;
