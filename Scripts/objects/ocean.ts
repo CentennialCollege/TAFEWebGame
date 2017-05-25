@@ -2,7 +2,7 @@ module objects {
   export class Ocean extends createjs.Bitmap {
     constructor() {
       super("./Assets/Sprites/ocean.gif");
-
+      this.Reset();
     }
 
     Reset() {
@@ -11,6 +11,9 @@ module objects {
 
     Update() {
       this.y += 5;
+      if(this.y >= 0) {
+        this.Reset();
+      }
     }
   }
 }

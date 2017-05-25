@@ -13,13 +13,18 @@ var objects;
     var Ocean = (function (_super) {
         __extends(Ocean, _super);
         function Ocean() {
-            return _super.call(this, "./Assets/Sprites/ocean.gif") || this;
+            var _this = _super.call(this, "./Assets/Sprites/ocean.gif") || this;
+            _this.Reset();
+            return _this;
         }
         Ocean.prototype.Reset = function () {
             this.y = -960;
         };
         Ocean.prototype.Update = function () {
             this.y += 5;
+            if (this.y >= 0) {
+                this.Reset();
+            }
         };
         return Ocean;
     }(createjs.Bitmap));
