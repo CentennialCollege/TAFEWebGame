@@ -17,6 +17,7 @@ var objects;
             _this.regX = 32.5;
             _this.regY = 32.5;
             _this.y = 430;
+            _this.IsColliding = false;
             return _this;
         }
         Plane.prototype.Update = function (stage) {
